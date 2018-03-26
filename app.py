@@ -7,7 +7,7 @@ app = Flask(__name__)
 def index():
     d = datetime.utcnow()
     unixtime = calendar.timegm(d.utctimetuple())
-    return unixtime
+    return str(unixtime * 1000)
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
